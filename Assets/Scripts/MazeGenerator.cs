@@ -29,6 +29,8 @@ public class MazeGenerator : MonoBehaviour
         }
 
         GenerateMaze(null, _mazeGrid[0, 0]);
+
+        CreateEntranceAndExit();
     }
 
     private void GenerateMaze(MazeCell previousCell, MazeCell currentCell)
@@ -136,5 +138,15 @@ public class MazeGenerator : MonoBehaviour
             currentCell.ClearFrontWall();
             return;
         }
+    }
+    private void CreateEntranceAndExit()
+    {
+      
+        int entranceX = Random.Range(0, _mazeWidth); 
+        _mazeGrid[entranceX, 0].ClearBackWall();
+
+        
+        int exitX = Random.Range(0, _mazeWidth);
+        _mazeGrid[exitX, _mazeDepth - 1].ClearFrontWall(); 
     }
 }
