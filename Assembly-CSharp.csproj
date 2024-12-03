@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MazeGenerator.cs" />
+    <Compile Include="Assets\playercontroller.cs" />
     <Compile Include="Assets\Scripts\MazeCell.cs" />
   </ItemGroup>
   <ItemGroup>
