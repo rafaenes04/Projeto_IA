@@ -6,7 +6,7 @@ public class playercontroller : MonoBehaviour
 {
     [SerializeField] CharacterController characterController;
 
-    private float speed = 3f;
+    public float speed = 5f;
 
     private Vector3 moveDirection;
 
