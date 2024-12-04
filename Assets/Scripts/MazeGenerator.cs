@@ -16,7 +16,7 @@ public class MazeGenerator : MonoBehaviour
 
     private MazeCell[,] _mazeGrid;
 
-    void Start()
+   public void StartMaze()
     {
         _mazeGrid = new MazeCell[_mazeWidth, _mazeDepth];
 
@@ -148,5 +148,25 @@ public class MazeGenerator : MonoBehaviour
         
         int exitX = Random.Range(0, _mazeWidth);
         _mazeGrid[exitX, _mazeDepth - 1].ClearFrontWall(); 
+    }
+    public void ResetMaze()
+    {
+        if (_mazeGrid != null)
+        {
+            for (int x = 0; x < _mazeWidth; x++)
+            {
+                for (int z = 0; z < _mazeDepth; z++)
+                {
+                    if (_mazeGrid[x, z] != null)
+                    {
+                        Destroy(_mazeGrid[x, z].gameObject);
+                    }
+                }
+            }
+        }
+
+        _mazeGrid = null;
+
+        StartMaze();
     }
 }
