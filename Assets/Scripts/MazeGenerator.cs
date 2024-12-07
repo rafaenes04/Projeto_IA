@@ -31,9 +31,11 @@ public class MazeGenerator : MonoBehaviour
         }
 
         GenerateMaze(null, _mazeGrid[0, 0]);
+        CreateEntranceAndExit();
+
         GetComponent<NavMeshSurface>().BuildNavMesh();
 
-        CreateEntranceAndExit();
+        
     }
 
     private void GenerateMaze(MazeCell previousCell, MazeCell currentCell)

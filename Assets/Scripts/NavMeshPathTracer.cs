@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-[RequireComponent(typeof(LineRenderer))]
+
 
 
 public class NavMeshPathTracer : MonoBehaviour
 {
+    public LineRenderer lineRenderer;
     private NavMeshAgent agent;
-    private LineRenderer lineRenderer;
     public float pathYOffset = -0.1f; 
-    private bool showPath = false; // Flag to toggle path visibility
+
 
     void Start()
     {
@@ -21,18 +21,12 @@ public class NavMeshPathTracer : MonoBehaviour
         lineRenderer.startWidth = 0.1f;
         lineRenderer.endWidth = 0.1f;
         lineRenderer.positionCount = 0;
-        lineRenderer.enabled = false;
     }
 
-    public void TogglePathVisibility()
-    {
-        showPath = !showPath; // Toggle the visibility flag
-        lineRenderer.enabled = showPath; // Enable or disable the line renderer
-    }
 
     void Update()
     {
-        if (showPath && agent.hasPath)
+        if (agent.hasPath)
         {
             DrawPath();
         }
