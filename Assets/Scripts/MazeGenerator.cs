@@ -172,6 +172,12 @@ public class MazeGenerator : MonoBehaviour
 
         _mazeGrid = null;
 
+        var navMeshSurface = GetComponent<NavMeshSurface>();
+        if (navMeshSurface != null)
+        {
+            navMeshSurface.BuildNavMesh();
+        }
+
         StartMaze();
     }
 }
