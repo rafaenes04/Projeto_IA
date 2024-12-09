@@ -47,6 +47,18 @@ O NavMesh para o A* é dividido em:
   - Representam áreas navegáveis com polígonos e triangulos.
 - Arestas:
   - Conexões entre os polígonos adjacentes.
+Um grafo é criado, onde cada nó representa um polígono do NavMesh, e as arestas representam caminhos viáveis.
+
+Processo de execução do Pathfinding:
+- Identificar os nós inicial e final:
+  - Localizar os polígons do NavMesh que contêm o ponto inicial e final.
+- Executar o A*:
+  - Usar o A* para calcular o caminho do ponto inicial ao final através do grafo de polígonos.
+- Interpolação dentro dos polígonos:
+  - O caminho que foi calculado é uma sequência de polígonos;
+  - Uma interpolação linear pode ser aplicada para gerar o caminho detalhado dentro dos polígonos.
+- Refinar o caminho:
+  - Pode ser aplicada uma suavização do caminho de modo a eliminar movimentos desnecessários ou pouco naturais.     
 
 
 ## Machine Learning (Nuno)
