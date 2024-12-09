@@ -34,6 +34,10 @@ Maze Generator- Gera o labirinto; Define aleatoriamente a entrada e saida do lab
 ![image](https://github.com/user-attachments/assets/2514d510-37bb-4f51-bf5b-cbec2c9e1dcd)
 ![image](https://github.com/user-attachments/assets/c79a2279-6574-4c25-98d2-881f10de81a7)
 ![image](https://github.com/user-attachments/assets/c573e7e4-e56d-4161-b699-548c141702d1)
+![image](https://github.com/user-attachments/assets/6c7dec3e-979d-4979-b40c-801237b78cf0)
+Este algoritmo começa em uma célula inicial, marca-a como visitada, e remove paredes aleatoriamente para conectar-se a células vizinhas ainda não visitadas.
+Quando não há vizinhos disponíveis, ele "volta" para células anteriores até encontrar novas possibilidades.
+
 
 
 
