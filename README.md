@@ -87,6 +87,39 @@ Processo de execução do Pathfinding:
 
 ## Machine Learning (Nuno)
 
+Para este jogo utilizamos também o Machine Learning com o objetivo do bot conseguir completar o caminho certo do labirinto.
+
+Para isto utilizamos o ML-Agents
+Ações Realizadas:
+-Instalação do pacote ML-Agents diretamente no Unity via Package Manager.
+-Criação de um ambiente Unity com agentes que representam "solucionadores de labirintos".
+
+-Configuração do componente Behavior Parameters no agente
+![image](https://github.com/user-attachments/assets/61049e90-153c-4764-8465-a0bb2bc34aec)
+Nome do Behavior: MazeSolverAgent.
+
+-Adicionamos um Script com o nome de "Maze Agent"
+
+![image](https://github.com/user-attachments/assets/f34f57a9-fb0a-4c4f-8518-ae1eeab50e68)
+
+Nele definimos colisões, movimento, regras do movimento e o que acontece se as regras forem quebradas
+![image](https://github.com/user-attachments/assets/34199d5c-30fc-4d35-9896-139b34355608)
+![image](https://github.com/user-attachments/assets/bb8864d3-1e0a-4642-b969-fba345d95b75)
+
+-Adicionamos uma Decision Request e deixamos os valores Default
+![image](https://github.com/user-attachments/assets/5a2141f2-b77e-44d8-85df-7a4e8ee63f99)
+
+Com isto passamos para o treinamento do Bot
+![image](https://github.com/user-attachments/assets/e4f0d8b6-cdb0-4f8d-9fe2-2418c365352d)
+utilizamos o comando "mlagents-learn --run-id=TesteApli" para começar com os testes para o bot aprender o caminho.
+
+Objetivo: Validar o comportamento do bot treinado.
+
+Exportar o modelo treinado (.onnx) com eficiência e importar no unity.
+![image](https://github.com/user-attachments/assets/c163eea1-0638-4c19-b6ab-b6c47880500e)
+
+Testar em cenários diferentes para avaliar se o agente encontra a solução do labirinto com eficiência
+
 
 
 
