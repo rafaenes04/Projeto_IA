@@ -17,9 +17,9 @@ Neste jogo utilizamos as seguintes técnicas de Inteligência Artificial:
 - Machine Learning.
 
 
-## DFS para Procedural Generation
+## DFS para Procedural Generation (Rafael)
 
-## PathFinding
+## PathFinding (Gabriel)
 Para este jogo utilizamos PathFinding para mostrar ao jogador o caminho mais rápido no labirinto.
 
 Para isso utilizamos o Unity NavMesh que é um sistema que permite a criação de mapas de navegação( Mesh ) que definem as zonas onde os personagens ou outros tipos de GameObjects se poderão mover.
@@ -38,9 +38,18 @@ Elementos do NavMesh:
 ![{2985E6D7-5C9C-4F86-8290-7C6C5FF8D9B4}](https://github.com/user-attachments/assets/5edcf1a5-5366-4ef0-b3d1-9cafcf79ecb2)
 
 #### A* no Unity NavMesh
+O A* é um algoritmo de pesquisa heuristica amplamente utilizado para encontrar o caminho mais curto em grafos ou redes. Combina a eficiência do algoritmo de Dijkstra com a função Heurística para acelarar a pesquisa pelo caminho ideal.
+
+No contexto de um NavMesh, o A* é aplicado para encontrar o caminho mais curto entre 2 pontos na Navigation Mesh.
+
+O NavMesh para o A* é dividido em:
+- Nós:
+  - Representam áreas navegáveis com polígonos e triangulos.
+- Arestas:
+  - Conexões entre os polígonos adjacentes.
 
 
-## Machine Learning
+## Machine Learning (Nuno)
 
 
 
