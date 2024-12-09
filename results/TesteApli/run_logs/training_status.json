@@ -1,0 +1,56 @@
+{
+    "MazeSolverAgent": {
+        "checkpoints": [
+            {
+                "steps": 499949,
+                "file_path": "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-499949.onnx",
+                "reward": 0.0,
+                "creation_time": 1733776861.363752,
+                "auxillary_file_paths": [
+                    "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-499949.pt"
+                ]
+            },
+            {
+                "steps": 500013,
+                "file_path": "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-500013.onnx",
+                "reward": 0.0,
+                "creation_time": 1733776861.415613,
+                "auxillary_file_paths": [
+                    "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-500013.pt"
+                ]
+            },
+            {
+                "steps": 500013,
+                "file_path": "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-500013.onnx",
+                "reward": null,
+                "creation_time": 1733777185.7291646,
+                "auxillary_file_paths": [
+                    "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-500013.pt"
+                ]
+            },
+            {
+                "steps": 500013,
+                "file_path": "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-500013.onnx",
+                "reward": null,
+                "creation_time": 1733778168.8313053,
+                "auxillary_file_paths": [
+                    "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-500013.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500013,
+            "file_path": "results\\TesteApli\\MazeSolverAgent.onnx",
+            "reward": null,
+            "creation_time": 1733778168.8313053,
+            "auxillary_file_paths": [
+                "results\\TesteApli\\MazeSolverAgent\\MazeSolverAgent-500013.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.6.0"
+    }
+}

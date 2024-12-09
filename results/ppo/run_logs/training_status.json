@@ -1,0 +1,65 @@
+{
+    "MazeSolverAgent": {
+        "checkpoints": [
+            {
+                "steps": 499960,
+                "file_path": "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-499960.onnx",
+                "reward": null,
+                "creation_time": 1733772078.4212086,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-499960.pt"
+                ]
+            },
+            {
+                "steps": 500088,
+                "file_path": "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.onnx",
+                "reward": null,
+                "creation_time": 1733772078.475441,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.pt"
+                ]
+            },
+            {
+                "steps": 500088,
+                "file_path": "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.onnx",
+                "reward": null,
+                "creation_time": 1733772372.871186,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.pt"
+                ]
+            },
+            {
+                "steps": 500088,
+                "file_path": "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.onnx",
+                "reward": null,
+                "creation_time": 1733772404.6585057,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.pt"
+                ]
+            },
+            {
+                "steps": 500088,
+                "file_path": "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.onnx",
+                "reward": null,
+                "creation_time": 1733772469.992928,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500088,
+            "file_path": "results\\ppo\\MazeSolverAgent.onnx",
+            "reward": null,
+            "creation_time": 1733772469.992928,
+            "auxillary_file_paths": [
+                "results\\ppo\\MazeSolverAgent\\MazeSolverAgent-500088.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.6.0"
+    }
+}

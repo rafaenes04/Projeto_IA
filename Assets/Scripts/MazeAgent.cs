@@ -19,14 +19,14 @@ public class MazeAgent : Agent
         // - Posição do agente
         // - Posição do destino
         // - Velocidade do agente
-        sensor.AddObservation(transform.position);
-        sensor.AddObservation(target.position);
+        sensor.AddObservation(transform.localPosition);
+        sensor.AddObservation(target.localPosition);
     }
 
     public override void OnEpisodeBegin()
     {
         // Reseta o agente no início de cada episódio.
-        transform.position = initialPosition;
+        transform.localPosition = initialPosition;
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -36,7 +36,7 @@ public class MazeAgent : Agent
         float moveZ = actions.ContinuousActions[1]; // Movimento no eixo Z.
 
         float moveSpeed = 1f;
-        transform.position += new Vector3(moveX, 0, moveZ) * Time.deltaTime * moveSpeed;
+        transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * moveSpeed;
     }
 
     private void OnTriggerEnter(Collider other){

@@ -24,6 +24,7 @@ public class MazeGenerator : MonoBehaviour
 
     private void Start()
     {
+        StartMaze();
         if (button != null)
         {
             button.onClick.AddListener(OnPathButtonClicked); // Assign the button click listener
