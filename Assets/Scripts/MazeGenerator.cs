@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Unity.AI.Navigation;
+using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class MazeGenerator : MonoBehaviour
 {
@@ -17,7 +19,49 @@ public class MazeGenerator : MonoBehaviour
 
     private MazeCell[,] _mazeGrid;
 
-   public void StartMaze()
+    public NavMeshPathTracer pathTracer;
+    public Button button;
+
+    private void Start()
+    {
+        if (button != null)
+        {
+            button.onClick.AddListener(OnPathButtonClicked); // Assign the button click listener
+        }
+        else
+        {
+            Debug.LogError("Button is not assigned in the Inspector!");
+        }
+
+        // Ensure that the NavMeshPathTracer component is properly assigned
+      
+        if (pathTracer == null)
+        {
+            Debug.LogError("NavMeshPathTracer component is not attached to this GameObject!");
+        }
+    }
+    public void OnPathButtonClicked()
+    {
+        // Activate the path immediately on button press
+        if (pathTracer != null)
+        {
+            pathTracer.ActivatePath();
+           
+        }
+
+        // Optionally, deactivate the path after 2 seconds
+        StartCoroutine(DeactivatePathAfterDelay(2f)); // Deactivate path after 2 seconds
+    }
+
+    private IEnumerator DeactivatePathAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for 2 seconds
+        if (pathTracer != null)
+        {
+            pathTracer.DeactivatePath();  // Hide the path
+        }
+    }
+    public void StartMaze()
     {
         _mazeGrid = new MazeCell[_mazeWidth, _mazeDepth];
 
@@ -35,7 +79,7 @@ public class MazeGenerator : MonoBehaviour
 
         GetComponent<NavMeshSurface>().BuildNavMesh();
 
-        
+
     }
 
     private void GenerateMaze(MazeCell previousCell, MazeCell currentCell)
@@ -146,13 +190,13 @@ public class MazeGenerator : MonoBehaviour
     }
     private void CreateEntranceAndExit()
     {
-      
-        int entranceX = Random.Range(0, _mazeWidth); 
+
+        int entranceX = Random.Range(0, _mazeWidth);
         _mazeGrid[entranceX, 0].ClearBackWall();
 
-        
+
         int exitX = Random.Range(0, _mazeWidth);
-        _mazeGrid[exitX, _mazeDepth - 1].ClearFrontWall(); 
+        _mazeGrid[exitX, _mazeDepth - 1].ClearFrontWall();
     }
     public void ResetMaze()
     {
@@ -172,12 +216,39 @@ public class MazeGenerator : MonoBehaviour
 
         _mazeGrid = null;
 
+        StartMaze();
+
+        StartCoroutine(RebuildNavMeshAndPath());
+    }
+    private IEnumerator RebuildNavMeshAndPath()
+    {
+        yield return null;
+
         var navMeshSurface = GetComponent<NavMeshSurface>();
         if (navMeshSurface != null)
         {
             navMeshSurface.BuildNavMesh();
         }
 
-        StartMaze();
+        var agent = GetComponent<NavMeshAgent>();
+        if (agent != null)
+        {
+            // Wait until the NavMeshAgent has a valid path.
+            yield return new WaitUntil(() => !agent.pathPending);
+
+            // Trigger path recalculation.
+            var agentNavigation = GetComponent<AgentNavigation>();
+            if (agentNavigation != null)
+            {
+                Vector3 currentDestination = agentNavigation.DesiredDestination;
+                agentNavigation.SetDestination(currentDestination);
+            }
+
+            var pathTracer = GetComponent<NavMeshPathTracer>();
+            if (pathTracer != null)
+            {
+                pathTracer.Update();
+            }
+        }
     }
 }
