@@ -62,9 +62,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9135882164711015556}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1951929810855950233}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
       insertIndex: -1
@@ -87,36 +84,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
   m_PrefabInstance: {fileID: 1790439764017632870}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9135882164711015556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448332427369671479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BrainParameters:
-    VectorObservationSize: 1
-    NumStackedVectorObservations: 1
-    m_ActionSpec:
-      m_NumContinuousActions: 0
-      BranchSizes: 01000000
-    VectorActionSize: 01000000
-    VectorActionDescriptions: []
-    VectorActionSpaceType: 0
-    hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
-  m_InferenceDevice: 0
-  m_BehaviorType: 0
-  m_BehaviorName: My Behavior
-  TeamId: 0
-  m_UseChildSensors: 1
-  m_UseChildActuators: 1
-  m_ObservableAttributeHandling: 0
 --- !u!114 &1951929810855950233
 MonoBehaviour:
   m_ObjectHideFlags: 0

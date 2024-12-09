@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7793266730046346711}
   - component: {fileID: 121882363268030134}
+  - component: {fileID: 6717168038931691906}
   m_Layer: 0
   m_Name: FrontWall
   m_TagString: Untagged
@@ -131,12 +132,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6717168038931691906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4353362207632353999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a25b20737baa548b661bd8221adf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4412864408263018219
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7019154547365806810}
   - component: {fileID: 5488695187108617324}
+  - component: {fileID: 9189038479264460874}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -571,12 +585,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9189038479264460874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967321803328748676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a25b20737baa548b661bd8221adf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8320604624021079256
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204047292828250339}
   - component: {fileID: 5593438752161611621}
+  - component: {fileID: 5761912945478298688}
   m_Layer: 0
   m_Name: BackWall
   m_TagString: Untagged
@@ -679,12 +706,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5761912945478298688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8688310192305053344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a25b20737baa548b661bd8221adf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8974914986120008127
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2474357787173877503}
   - component: {fileID: 2400099630511554266}
+  - component: {fileID: 1272801221585065728}
   m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
@@ -733,9 +773,21 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1272801221585065728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8974914986120008127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a25b20737baa548b661bd8221adf37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
