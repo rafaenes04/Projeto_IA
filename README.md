@@ -82,7 +82,12 @@ Processo de execução do Pathfinding:
   - O caminho que foi calculado é uma sequência de polígonos;
   - Uma interpolação linear pode ser aplicada para gerar o caminho detalhado dentro dos polígonos.
 - Refinar o caminho:
-  - Pode ser aplicada uma suavização do caminho de modo a eliminar movimentos desnecessários ou pouco naturais.     
+  - Pode ser aplicada uma suavização do caminho de modo a eliminar movimentos desnecessários ou pouco naturais.
+    
+![image](https://github.com/user-attachments/assets/02a41611-d57f-4ab9-a442-077af4fff0e1)
+![image](https://github.com/user-attachments/assets/f3000156-d7b1-4e2f-a13a-262ea34b8fbb)
+![image](https://github.com/user-attachments/assets/3c3cae36-d5fd-41b8-b7d6-4b362979240b)
+
 
 
 ## Machine Learning (Nuno)
