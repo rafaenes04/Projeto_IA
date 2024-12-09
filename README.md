@@ -18,6 +18,17 @@ Neste jogo utilizamos as seguintes técnicas de Inteligência Artificial:
 
 
 ## DFS para Procedural Generation (Rafael)
+Para a base deste jogo utilizamos um Procedural Maze. É um labirinto gerado automaticamente utilizando algoritmos computacionais. Em vez de ser criado manualmente, os labirintos são criados com base em regras predefinidas e podem ser diferentes a cada execução do programa.
+Neste caso, o labirinto é gerado em tempo real, com o layout do labirinto determinado de forma aleatória.
+Scripts:
+-Maze Cell
+-Maze Generator
+
+Maze Cell- Elementos e Paredes
+.Cada célula possui quatro paredes: esquerda, direita, frontal, e traseira, bem como um bloco para indicar que a célula ainda não foi visitada.
+.As paredes podem ser removidas para criar caminhos.
+![image](https://github.com/user-attachments/assets/8f0d5aa2-6d34-40b4-9087-0d43bb5abb25)
+![image](https://github.com/user-attachments/assets/545bd1e8-6f20-4e10-a92f-86cb34c14607)
 
 ## PathFinding (Gabriel)
 Para este jogo utilizamos PathFinding para mostrar ao jogador o caminho mais rápido no labirinto.
