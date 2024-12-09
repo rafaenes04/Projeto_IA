@@ -20,6 +20,7 @@ Neste jogo utilizamos as seguintes técnicas de Inteligência Artificial:
 ## DFS para Procedural Generation (Rafael)
 Para a base deste jogo utilizamos um Procedural Maze. É um labirinto gerado automaticamente utilizando algoritmos computacionais. Em vez de ser criado manualmente, os labirintos são criados com base em regras predefinidas e podem ser diferentes a cada execução do programa.
 Neste caso, o labirinto é gerado em tempo real, com o layout do labirinto determinado de forma aleatória.
+ 
 Scripts:
 -Maze Cell
 -Maze Generator
