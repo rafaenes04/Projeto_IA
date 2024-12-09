@@ -1350,6 +1350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 0}
   pathYOffset: 1
+  isPathVisible: 0
 --- !u!120 &1514896390
 LineRenderer:
   serializedVersion: 2
