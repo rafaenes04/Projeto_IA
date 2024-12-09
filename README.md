@@ -30,6 +30,14 @@ Maze Cell- Elementos e Paredes
 ![image](https://github.com/user-attachments/assets/8f0d5aa2-6d34-40b4-9087-0d43bb5abb25)
 ![image](https://github.com/user-attachments/assets/545bd1e8-6f20-4e10-a92f-86cb34c14607)
 
+Maze Generator- Gera o labirinto; Define aleatoriamente a entrada e saida do labirinto; Função de Reset do Labirinto
+![image](https://github.com/user-attachments/assets/2514d510-37bb-4f51-bf5b-cbec2c9e1dcd)
+![image](https://github.com/user-attachments/assets/c79a2279-6574-4c25-98d2-881f10de81a7)
+![image](https://github.com/user-attachments/assets/c573e7e4-e56d-4161-b699-548c141702d1)
+
+
+
+
 ## PathFinding (Gabriel)
 Para este jogo utilizamos PathFinding para mostrar ao jogador o caminho mais rápido no labirinto.
 
