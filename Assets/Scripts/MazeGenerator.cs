@@ -22,6 +22,8 @@ public class MazeGenerator : MonoBehaviour
     public NavMeshPathTracer pathTracer;
     public Button button;
 
+
+
     private void Start()
     {
         StartMaze();
@@ -41,6 +43,7 @@ public class MazeGenerator : MonoBehaviour
             Debug.LogError("NavMeshPathTracer component is not attached to this GameObject!");
         }
     }
+
     public void OnPathButtonClicked()
     {
         // Activate the path immediately on button press
@@ -72,20 +75,23 @@ public class MazeGenerator : MonoBehaviour
             {
                 _mazeGrid[x, z] = Instantiate(_mazeCellPrefab, new Vector3(x, 0, z), Quaternion.identity, transform);
                 _mazeGrid[x, z].transform.localPosition = new Vector3(x, 0, z);
+
             }
         }
 
         GenerateMaze(null, _mazeGrid[0, 0]);
         CreateEntranceAndExit();
 
-        GetComponent<NavMeshSurface>().BuildNavMesh();
 
+
+        GetComponent<NavMeshSurface>().BuildNavMesh();
 
     }
 
     private void GenerateMaze(MazeCell previousCell, MazeCell currentCell)
     {
         currentCell.Visit();
+        currentCell.IsPathCell = true;
         ClearWalls(previousCell, currentCell);
 
         MazeCell nextCell;
@@ -100,7 +106,7 @@ public class MazeGenerator : MonoBehaviour
             }
         } while (nextCell != null);
     }
-
+   
     private MazeCell GetNextUnvisitedCell(MazeCell currentCell)
     {
         var unvisitedCells = GetUnvisitedCells(currentCell);
@@ -153,6 +159,7 @@ public class MazeGenerator : MonoBehaviour
             }
         }
     }
+   
 
     private void ClearWalls(MazeCell previousCell, MazeCell currentCell)
     {
@@ -252,4 +259,6 @@ public class MazeGenerator : MonoBehaviour
             }
         }
     }
+
+
 }

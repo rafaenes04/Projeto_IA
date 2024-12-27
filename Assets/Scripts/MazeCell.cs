@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MazeCell : MonoBehaviour
@@ -9,6 +10,7 @@ public class MazeCell : MonoBehaviour
 
     [SerializeField]
     private GameObject _rightWall;
+    public bool IsPathCell { get; set; }
 
     [SerializeField]
     private GameObject _frontWall;
@@ -21,12 +23,12 @@ public class MazeCell : MonoBehaviour
 
     public bool IsVisited { get; private set; }
 
+
     public void Visit()
     {
         IsVisited = true;
         _unvisitedBlock.SetActive(false);
     }
-
     public void ClearLeftWall()
     {
         _leftWall.SetActive(false);
@@ -46,4 +48,5 @@ public class MazeCell : MonoBehaviour
     {
         _backWall.SetActive(false);
     }
+   
 }
