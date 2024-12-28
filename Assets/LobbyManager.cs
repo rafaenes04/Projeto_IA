@@ -12,6 +12,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public Button createPartyButton;
     public Button joinPartyButton;
     public Button readyButton;
+    public Button startGameButton;
 
     [Header("Player Settings")]
     public string playerName;
@@ -35,14 +36,25 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         joinPartyButton.onClick.AddListener(JoinParty);
         readyButton.onClick.AddListener(ReadyUp);
 
-        // Assign default player name
-        playerNameInput.text = $"Player{Random.Range(1000, 9999)}";
+        playerNameInput.text = playerName;
+        PhotonNetwork.NickName = playerName;
+
+        startGameButton.onClick.AddListener(StartGame);
+        startGameButton.gameObject.SetActive(false);
     }
 
-    public void UpdatePlayerName()
+    private void UpdatePlayerName(string newName)
     {
-        playerName = playerNameInput.text;
-        PhotonNetwork.NickName = playerName; // Set Photon player nickname
+        if (!string.IsNullOrEmpty(newName))
+        {
+            playerName = newName; 
+            PhotonNetwork.NickName = playerName;
+            Debug.Log($"Player name updated to: {playerName}");
+        }
+        else
+        {
+            Debug.LogWarning("Player name cannot be empty!");
+        }
     }
 
     public void UpdateSkinSelection()
@@ -60,7 +72,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             return;
         }
 
-        RoomOptions roomOptions = new RoomOptions { MaxPlayers = 4 }; // Set max players
+        RoomOptions roomOptions = new RoomOptions { MaxPlayers = 4 }; 
         PhotonNetwork.CreateRoom(partyId, roomOptions);
     }
 
@@ -79,16 +91,36 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void ReadyUp()
     {
+        PhotonNetwork.LocalPlayer.SetCustomProperties(new ExitGames.Client.Photon.Hashtable
+        {
+            { "SkinIndex", selectedSkinIndex },
+            { "PlayerName", playerName }
+        });
+
         Debug.Log($"Player {playerName} is ready with skin {selectedSkinIndex}");
-        // Additional ready-up logic can go here
     }
 
-    // Callback for when the player joins a room
     public override void OnJoinedRoom()
     {
         Debug.Log($"Joined party: {PhotonNetwork.CurrentRoom.Name}");
-        // Spawn the player in the room
-        PhotonNetwork.Instantiate("PlayerPrefab", Vector3.zero, Quaternion.identity);
+
+        // Enable the start button for the master client
+        if (PhotonNetwork.IsMasterClient)
+        {
+            startGameButton.gameObject.SetActive(true);
+        }
+    }
+    public void StartGame()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            // Switch to the game scene
+            PhotonNetwork.LoadLevel("GabrielSampleScene"); // Replace "GameScene" with your actual scene name
+        }
+        else
+        {
+            Debug.LogWarning("Only the master client can start the game!");
+        }
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)

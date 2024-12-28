@@ -78,6 +78,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
       insertIndex: -1
       addedObject: {fileID: 486910801181270955}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2138912156494314643}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7897778779066253825}
   m_SourcePrefab: {fileID: 100100000, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
 --- !u!1 &1448332427369671479 stripped
 GameObject:
@@ -189,9 +195,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -276,9 +280,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6498660f882c58742aa579f55374a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 0}
+  lineRenderer: {fileID: 8730009668949972574}
   pathYOffset: 1
-  isPathVisible: 0
+  isPathVisible: 1
+--- !u!114 &2138912156494314643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448332427369671479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 7897778779066253825}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &7897778779066253825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448332427369671479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!95 &5310446356765207543 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
