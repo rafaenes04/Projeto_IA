@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class playercontroller : MonoBehaviour
 {
@@ -25,7 +26,8 @@ public class playercontroller : MonoBehaviour
 
         // Calculate movement direction
         moveDirection = new Vector3(horizontal, 0, vertical);
-        
+        if(GetComponent<PhotonView>().IsMine == true)
+        {
         if (moveDirection.magnitude > 0)
         {
             // Normalize to maintain consistent movement speed
@@ -40,6 +42,7 @@ public class playercontroller : MonoBehaviour
         characterController.Move(moveDirection * speed * Time.deltaTime);
         bool isMoving = moveDirection.magnitude > 0; // Check if there's any movement
         animator.SetBool("isRunning", isMoving);
+        }
     }
     public void SetMovementEnabled(bool enabled)
     {
