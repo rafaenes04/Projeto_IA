@@ -10,8 +10,12 @@ public class playercontroller : MonoBehaviour
 
     public float speed = 5f;
     private Vector3 moveDirection;
-    private bool movementEnabled = true;
+    private bool movementEnabled = false;
 
+    public void EnableMovement()
+    {
+        movementEnabled = true;
+    }
     void Update()
     {
         if (!movementEnabled)

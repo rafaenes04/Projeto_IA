@@ -22,11 +22,13 @@ public class RoomList : MonoBehaviourPunCallbacks
 
 
         for (int i = 0; i < roomList.Count; i++) {
-            if (roomList[i].IsOpen && roomList[i].IsVisible && roomList[i].PlayerCount >= 1)
+            if (roomList[i].IsOpen && roomList[i].IsVisible && roomList[i].PlayerCount >= 0)
             {
-               print(roomList[i].Name);
                GameObject Room = Instantiate(RoomPrefab, Vector3.zero, Quaternion.identity,GameObject.Find("Content").transform);
-               Room.GetComponent<Room>().Name.text = roomList[i].Name;
+                Room.transform.localPosition = new Vector3(Room.transform.localPosition.x, Room.transform.localPosition.y, 0);
+                Room.GetComponent<Room>().Name.text = roomList[i].Name;
+
+                Room.GetComponent<Room>().UpdateRoomInfo(roomList[i].Name, roomList[i].PlayerCount, 4);
 
                 AllRooms[i] = Room;
 

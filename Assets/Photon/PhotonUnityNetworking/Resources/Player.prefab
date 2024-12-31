@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 7411bead20b48ff4e872c675ef0bcb85, type: 3}
       propertyPath: m_Controller
       value: 
@@ -284,8 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 8730009668949972574}
+  agent: {fileID: 1037879367708101411}
   pathYOffset: 1
-  isPathVisible: 1
+  isPathVisible: 0
 --- !u!114 &2138912156494314643
 MonoBehaviour:
   m_ObjectHideFlags: 0

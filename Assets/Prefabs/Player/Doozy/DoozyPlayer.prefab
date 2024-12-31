@@ -281,6 +281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6498660f882c58742aa579f55374a92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 0}
+  lineRenderer: {fileID: 4939507442986403831}
   pathYOffset: 1
   isPathVisible: 0

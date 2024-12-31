@@ -10,7 +10,7 @@ using UnityEngine.AI;
 public class NavMeshPathTracer : MonoBehaviour
 {
     public LineRenderer lineRenderer;
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     public float pathYOffset = -0.1f;
     public bool isPathVisible = false;
 
